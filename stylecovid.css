@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body{
+    /* background: darkcyan; */
+    background-color: #adefd1ff;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    padding: 5%;
+}
+#head{
+    text-align: center;
+    padding-bottom: 3%;
+    font-weight: bolder;
+    font-size: 3em;
+    margin: 0px;
+    color: transparent;
+    background-image: linear-gradient(to right,red,orange,blue,green);
+    -webkit-background-clip: text;
+    animation:animate 15s linear infinite;
+    background-size:1000%; 
+}
+
+#table-head{
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+.hidden {
+    display: none;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.blue {
+    color: blue;
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+    font-weight: bold;
+}
+
+.orange {
+    color: orange;
+    font-weight: bold;
+}
+
+.state-name{
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+.district-table{
+    font-family: 'Poppins', sans-serif;
+}
+
+.state-name:hover{
+    background-color: #32c888;
+color: white;
+    font-size: larger;
+}
+
+.main-div{
+    width: 100%;
+}
+
+.card{
+    border: solid;
+    margin-right: 90%;
+    margin-bottom: 2em;
+    left: 10%;
+    text-align: center; 
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.card h1{
+   font-size: x-large;
+   font-weight: bold;
+}
+
+.caseNumber{
+    font-weight: bolder;
+    font-size: 2em;
+}
+.main-div p {
+    display: inline;
+}
+.main-div h1{
+    font-size: 25px;
+}
+.main-div .caseNumber{
+    font-size: 20px;
+}
+
+.box{
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        background-position:0% 100%;
+    }
+    50%
+    {
+        background-position:100% 0%;
+    }
+    100%
+    {
+        background-position:0% 100%;
+    }
+}
+@media only screen and (max-width: 996px){
+    .main-div h1{
+        font-size: 20px;
+        /* padding: 1%; */
+        margin-left: 5%;
+    }
+    .main-div .caseNumber{
+        font-size: 20px;
+        /* padding: 1%; */
+        margin-left: 10%;
+    }
+  }
+  @media only screen and (max-width: 768px){
+    .main-div h1{
+        font-size: 20px;
+        /* padding: 1%; */
+        margin-left: 5%;
+    }
+    .main-div .caseNumber{
+        font-size: 20px;
+        /* padding: 1%; */
+        margin-left: 10%;
+    }
+  }
+  @media only screen and (max-width: 500px){
+    .main-div h1{
+        font-size: 20px;
+        /* padding: 1%; */
+        margin-left: 5%;
+    }
+    .main-div .caseNumber{
+        font-size: 20px;
+        /* padding: 1%; */
+        margin-left: 10%;
+    }
+  }
