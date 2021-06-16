@@ -1,5 +1,5 @@
 var isResponseAvailable = false;
-// get api
+
     fetch('https://api.covid19india.org/state_district_wise.json')
     .then(Response => {
         return Response.json();
@@ -26,8 +26,7 @@ var isResponseAvailable = false;
 
             var createDistrictTable = document.createElement('table');
             createDistrictTable.setAttribute('class','table district-table hidden');
-            var createDistrictTableHeading = document.createElement('thead');
-            // createDistrictTableHeading.setAttribute('class', "thead-dark");
+            var createDistrictTableHeading = document.createElement('thead')
             var createDistrictHeadingRow = document.createElement('tr');
             var districtHeading = document.createElement('th');
             districtHeading.innerHTML = 'District';
@@ -68,22 +67,20 @@ var isResponseAvailable = false;
                 var distTableHeading = document.createElement('th');
                 distTableHeading.innerHTML = districtName;
                 districTableRow.appendChild(distTableHeading);
-                // debugger;
+
                 districTableRow.appendChild(prepareCovidData(districTableRow, DistrictData.confirmed, 'red'));
                 districTableRow.appendChild(prepareCovidData(districTableRow, DistrictData.active ,'orange'));
                 districTableRow.appendChild(prepareCovidData(districTableRow, DistrictData.recovered,'green'));
                 districTableRow.appendChild(prepareCovidData(districTableRow, DistrictData.deceased,'blue'));
                 districtTableBody.appendChild(districTableRow);
                 createDistrictTable.appendChild(districtTableBody);
-                // debugger;
             });
             totalActive += active;
             totalConfirmed += confirmed;
             totalDeceased += deceased;
             totalRecovered += recovered;
             mapDataWithStateCode.push([`in-${stateData.statecode.toLowerCase()}`, active]);
-                // ['in-py', 0],
-            // console.log(`${stateData.statecode} and active count is ${active}`);
+
             stateTableRow.appendChild(prepareCovidData(stateTableRow, confirmed, 'red'));
             stateTableRow.appendChild(prepareCovidData(stateTableRow, active, 'orange'));
             stateTableRow.appendChild(prepareCovidData(stateTableRow, recovered, 'green'));
@@ -93,7 +90,7 @@ var isResponseAvailable = false;
         });
         console.log(mapDataWithStateCode);
         debugger;
-        //Card
+
 
         let confirmDiv = document.createElement("div");
         confirmDiv.setAttribute('class' , ' box');
